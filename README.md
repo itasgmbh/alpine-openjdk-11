@@ -36,6 +36,7 @@ $ sudo docker images |grep jdk
 docker.io/openjdk                            11-jdk   f684efd78557  2 weeks ago         979 MB
 $
 ```
+
 I confirmed that libjvm.so becomes larger when using jlink.
 
 ```
