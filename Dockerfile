@@ -11,8 +11,9 @@ RUN mkdir /opt; cd /opt; \
     && sha256sum -c ${JDK_ARCHIVE}.sha256 \
     && tar zxf ${JDK_ARCHIVE} \    
     && rm ${JDK_ARCHIVE} ${JDK_ARCHIVE}.sha256 \
-    && rm -f rm ${JAVA_HOME}/lib/src.zip \
-    && ln -s jdk-11 java
+    && ln -s jdk-11 java \
+    && rm -f rm ${JAVA_HOME}/lib/src.zip
+    
     
 ENV PATH="$PATH:$JAVA_HOME/bin"
 ENV JAVA_VERSION 11-ea+${JDK_BUILD}
